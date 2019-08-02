@@ -44,18 +44,12 @@ html {
   font-size: 10px;
 }
 
-body {
-  box-sizing: border-box;
-  margin: 0;
-  width: 100vw;
-}
-
 ul {
   list-style: none;
 }
 
 .page {
-  width: 100%;
+  width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -68,7 +62,7 @@ ul {
   align-items: center;
   font-family: "Philosopher", serif;
   min-height: 12em;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .header__companylogo {
@@ -96,7 +90,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   height: 2em;
-  width: 70%;
+  width: 80%;
   padding-top: 2em;
 }
 
@@ -164,13 +158,13 @@ ul {
 
 .navigation__dropdown li {
   display: none;
-  padding-top: 0.5em;
 }
 
 .navigation__item_dropdowned:hover .navigation__dropdown li {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-bottom: 1px solid #E5E8F0;
-  width: 15em;
   height: 3em;
 }
 
@@ -246,10 +240,10 @@ ul {
   border-radius: 5px;
 }
 .material__achieves-text {
-  background-color: red;
   font-size: 1.4em;
-  line-height: 20px;
+  line-height: 100px;
   font-family: "Corsa Grotesk", sans-serif;
+  margin-left: -50px;
 }
 .material__line {
   width: 0px;
