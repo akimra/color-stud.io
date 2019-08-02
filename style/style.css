@@ -1,5 +1,186 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher.eot");
+  src: url("../fonts/Philosopher.eot?#iefix") format("embedded-opentype"), url("../fonts/Philosopher.woff") format("woff"), url("../fonts/Philosopher.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Corsa Grotesk";
+  src: local("Corsa Grotesk Regular"), local("Corsa-Grotesk-Regular"), url("../fonts/CorsaGrotesk-Regular.woff2") format("woff2"), url("../fonts/CorsaGrotesk-Regular.woff") format("woff"), url("../fonts/CorsaGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+.page {
+  background-color: #ff8585;
+  width: 100%;
   max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0px 13.5em;
+  background-color: #6765f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Philosopher', serif;
+  min-height: 12em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__companylogo {
+  max-width: 30em;
+}
+
+.header__companylogo_title {
+  font-size: 2.7em;
+  margin: 0;
+}
+
+.header__companylogo_subtitle {
+  font-size: 1em;
+  font-family: 'Corsa Grotesk', sans-serif;
+  margin: .1em 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 2em;
+  width: 70%;
+}
+
+.navigation {
+  font-size: 1.6em;
+  font-family: 'Gilroy', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation__item {
+  display: inline-block;
+}
+
+.navigation__item_decorated {
+  color: #FFB932;
+}
+
+.navigation__item i {
+  font-size: .7em;
+}
+
+.navigation__socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFB932;
+}
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feedback__item {
+  display: inline-block;
+  font-family: 'Corsa Grotesk', sans-serif;
+  font-size: 1.4em;
+}
+
+.feedback__item_call {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 1.8em;
+}
+
+.feedback__item i {
+  color: #6B83DA;
+}
+
+@media (max-device-width: 1100px) {
+  html {
+    font-size: 8px;
+    background-color: #990000 !important;
+  }
+}
+
+@media (max-device-width: 762px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

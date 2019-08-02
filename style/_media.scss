@@ -1,0 +1,21 @@
+@media (max-device-width: 1100px) {
+
+    html {
+    font-size: 8px;
+  }
+
+}
+
+@media (max-device-width: 762px) {
+  .header {
+    flex-direction: column;    
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .feedback {
+    flex-direction: column;
+  }
+}

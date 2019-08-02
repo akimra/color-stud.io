@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("/Philosopher.51c6aa97.eot");
+  src: url("/Philosopher.51c6aa97.eot?#iefix") format("embedded-opentype"), url("/Philosopher.d890ff49.woff") format("woff"), url("/Philosopher.9a7086f7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Gilroy-Regular.a6aadc69.eot");
+  src: url("/Gilroy-Regular.a6aadc69.eot?#iefix") format("embedded-opentype"), url("/Gilroy-Regular.183d11dc.woff") format("woff"), url("/Gilroy-Regular.dd7b5758.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Corsa Grotesk";
+  src: local("Corsa Grotesk Regular"), local("Corsa-Grotesk-Regular"), url("/CorsaGrotesk-Regular.a059ec41.woff2") format("woff2"), url("/CorsaGrotesk-Regular.95a68854.woff") format("woff"), url("/CorsaGrotesk-Regular.6d5ce48b.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@media (max-device-width: 1100px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-device-width: 762px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .feedback {
+    flex-direction: column;
+  }
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+.page {
+  background-color: #ff8585;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  margin: 0px 13.5em;
+  background-color: #6765f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Philosopher", serif;
+  min-height: 12em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.header__companylogo {
+  width: 25em;
+  min-width: 10em;
+  text-align: center;
+}
+.header__companylogo_title {
+  font-size: 2.7em;
+  margin: 0;
+}
+.header__companylogo_subtitle {
+  font-size: 1em;
+  font-family: "Corsa Grotesk", sans-serif;
+  margin: 0.1em 0;
+  letter-spacing: 0.46em;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 2em;
+  width: 70%;
+  padding-top: 2em;
+}
+
+.navigation {
+  font-size: 1.6em;
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.navigation__item {
+  display: inline-block;
+}
+.navigation__item_decorated {
+  color: #FFB932;
+}
+.navigation__item i {
+  font-size: 0.7em;
+}
+.navigation__socialLinks {
+  display: flex;
+  width: 5em;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #FFB932;
+  margin-left: 3em;
+  font-size: 1.5em;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.feedback__item {
+  display: inline-block;
+  font-family: "Corsa Grotesk", sans-serif;
+  font-size: 1.3em;
+}
+.feedback__item_call {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.8em;
+  margin-left: 3em;
+}
+.feedback__item i {
+  color: #6B83DA;
+}
+
+.navigation__dropdown li {
+  display: none;
+  padding-top: 0.5em;
+}
+
+.navigation__item_dropdowned:hover .navigation__dropdown li {
+  display: block;
+  border-bottom: 1px solid #E5E8F0;
+  width: 15em;
+  height: 3em;
+}
+
+.navigation__item_dropdowned:hover .navigation__dropdown li:last-child {
+  border-bottom: 0px;
+}
+
+.navigation__dropdown {
+  padding: 1em;
+  position: absolute;
+  background-color: #fff;
+  display: none;
+  width: 15em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.navigation__item_dropdowned:hover .navigation__dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=/style.e0c02e61.css.map */
