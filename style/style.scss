@@ -1,5 +1,6 @@
 @import "../fonts/_fontfaces.scss";
 @import "./media.scss";
+@import "./mixins.scss";
 //    --    variables   --    //
 $main-dark: #1F3744;
 $main-dark-grey: #3C445E;
@@ -7,8 +8,12 @@ $decor-orange: #FFB932;
 $decor-blue: #6B83DA;
 $decor-dark-blue: #163993;
 $main-line-grey: #E5E8F0;
+$main-light-grey: #CCD1DD;
 
 //    --    variables.done   --    //
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
@@ -19,7 +24,7 @@ body {
   margin: 0;
   //font-family: 'Philosopher';
 
-  width:100vw;
+  width: 100vw;
   
 }
 
@@ -28,7 +33,6 @@ ul {
 }
 
 .page {
-  background-color: rgb(255, 133, 133);
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -38,7 +42,6 @@ ul {
 .header {
   position: relative;
   margin: 0px 13.5em;
-  background-color: #6765f7;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,19 +50,23 @@ ul {
   justify-content: space-evenly;
   flex-wrap: wrap;
   &__companylogo {
-    width: 25em;
+    width: 23em;
     min-width: 10em;
     text-align: center;
     &_title{
       font-size: 2.7em;
       margin: 0;
+      color: $main-dark;
+      font-weight: bold;
     }
 
     &_subtitle {
       font-size: 1em;
       font-family: 'Corsa Grotesk', sans-serif;
+      font-size: 1.4em;
       margin: .1em 0;
-      letter-spacing: .46em;
+      letter-spacing: .18em;
+      color: $decor-dark-blue;
     }
 
   }
@@ -81,8 +88,10 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  margin: 0;
   &__item {
     display: inline-block;
+    font-weight: bold;
     &_decorated {
       color: $decor-orange;
     }
@@ -92,15 +101,16 @@ ul {
     }
   }
 
-  &__socialLinks {
-    display: flex;
-    width: 5em;
-    flex-direction: row;
-    justify-content: space-between;
-    color: $decor-orange;
-    margin-left: 3em;
-    font-size: 1.5em;
-  }
+}
+
+.socialLinks {
+  display: flex;
+  width: 5em;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $decor-orange;
+  margin-left: 3em;
+  font-size: 1.5em;
 }
 
 .feedback {
@@ -115,6 +125,9 @@ ul {
       font-family: 'Gilroy', sans-serif;
       font-size: 1.8em;
       margin-left: 3em;
+      color: $decor-dark-blue;
+      font-weight: bold;
+      @include text-underline;
     }
 
     & i {
@@ -143,7 +156,7 @@ ul {
 }
 
 .navigation__dropdown {
-  padding: 1em;
+  padding: 1em 1em 0 1em;
   position: absolute;
   background-color: #fff;
   display: none;
@@ -153,6 +166,7 @@ ul {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   font-size: 1em;
   border-radius: 3px;
+  z-index: 3;
 }
 
 .navigation__item_dropdowned:hover .navigation__dropdown {
@@ -161,3 +175,73 @@ ul {
 }
 
 //    --    dropdown.done    --    //
+
+//    --    header.done   --    //
+
+//    --    material.block   --    //
+.material {
+  background-image: url("../img/image.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 765px;
+  position: relative;
+  padding-left: 135px;
+  padding-top: 180px;
+  padding-right: 135px;
+  backdrop-filter: blur(8px);
+  &__arrows {
+    position: absolute;
+    top: 250px;
+    left: 90%;
+  }
+
+  &__title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 4.5em;
+    color: $main-dark;
+  }
+
+  &__description {
+    width: 480px;
+    font-size: 1.8em;
+    font-family: 'Corsa Grotesk', sans-serif;
+    line-height: 32px;
+    color: $main-dark-grey;
+  }
+
+  &__pickbutton {
+    @include grad-button;
+    height: 68px;
+    width: 270px;
+    line-height: 68px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+
+  &__achieves {
+    background-color: rgba(255,255,255,.7);
+    display: flex;
+    margin-top: 140px;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  &__achieves-text {
+    background-color: red;
+    font-size: 1.4em;
+    line-height: 20px;
+    font-family: 'Corsa Grotesk', sans-serif;
+    
+  }
+
+  &__line {
+    width: 0px;
+    height: 56px;
+    border-left: 1px solid $main-light-grey;
+
+  }
+}
