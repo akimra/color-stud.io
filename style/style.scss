@@ -10,7 +10,7 @@ $decor-dark-blue: #163993;
 $main-line-grey: #E5E8F0;
 $main-light-grey: #CCD1DD;
 
-//    --    variables.done   --    //
+//    --    /variables   --    //
 * {
   box-sizing: border-box;
 }
@@ -19,24 +19,47 @@ html {
   font-size: 10px;
 }
 
-// body {
-//   box-sizing: border-box;
-//   margin: 0;
-//   //font-family: 'Philosopher';
-
-//   width: 100vw;
-  
-// }
+body {
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 ul {
   list-style: none;
 }
 
-.page {
-  width: 100vw;
-  max-width: 1440px;
-  margin: 0 auto;
+h2 {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 4.5em;
+  color: $main-dark;
 }
+
+
+
+//    --    UI Kit    --    //
+.card {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__description {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    border-radius: 5px;
+    font-family: Gilroy;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.yellowbutton {
+  @include grad-button;
+}
+//    --    /UI Kit   --    //
+
+
 
 //    --     header   --    //
 .header {
@@ -175,49 +198,40 @@ ul {
   flex-direction: column;
 }
 
-//    --    dropdown.done    --    //
+//    --    /dropdown    --    //
 
-//    --    header.done   --    //
+//    --    /header   --    //
+
+
+
 
 //    --    material.block   --    //
 .material {
   background-image: url("../img/image.jpg");
   background-repeat: no-repeat;
+  background-size: 100% auto;
   width: 100%;
   height: 765px;
   position: relative;
   padding-left: 135px;
   padding-top: 180px;
   padding-right: 135px;
-  backdrop-filter: blur(8px);
+  
   &__arrows {
     position: absolute;
     top: 250px;
     left: 90%;
   }
 
-  &__title {
-    font-family: 'Gilroy', sans-serif;
-    font-size: 4.5em;
-    color: $main-dark;
-  }
+  // &__title {
+  //   font-family: 'Gilroy', sans-serif;
+  //   font-size: 4.5em;
+  //   color: $main-dark;
+  // }
 
   &__description {
     width: 480px;
-    font-size: 1.8em;
-    font-family: 'Corsa Grotesk', sans-serif;
-    line-height: 32px;
-    color: $main-dark-grey;
-  }
-
-  &__pickbutton {
-    @include grad-button;
-    height: 68px;
-    width: 270px;
-    line-height: 68px;
-    font-family: 'Gilroy', sans-serif;
-    font-size: 1.7em;
-    font-weight: bold;
+    @include title-description;
   }
 
   &__achieves {
@@ -229,6 +243,7 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 5px;
+    backdrop-filter: blur(8px);
   }
 
   &__achieves-text {
@@ -244,3 +259,58 @@ ul {
     border-left: 1px solid $main-light-grey;
   }
 }
+//    --    material.block.done   --    //
+
+
+
+//    --    services.block    --    //
+.services {
+  margin: 100px 135px;
+  height: 624px;
+  width: 1170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  
+
+  &__description {
+    @include title-description;
+    width: 570px;
+  }
+
+  &__card {
+    width: 370px;
+    height: 450px;
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) {
+        background-image: url("../img/service#{$i}.png");
+      }
+    }
+
+    &_underline {
+      display: inline-block;
+      margin-top: 22px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $decor-dark-blue;
+      @include text-underline;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 1170px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+//    --    /services.block   --    //
+
+
+
+//    --    expert.block    --    //
+
+//    --    /expert.block   --    //

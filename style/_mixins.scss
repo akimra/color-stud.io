@@ -3,6 +3,12 @@
   border-radius: 34px;
   display: inline-block;
   text-align: center;
+  height: 68px;
+  line-height: 68px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: 0 50px;
 }
 
 @mixin text-underline {
@@ -17,4 +23,11 @@
     background-color: $decor-orange;
     z-index: -2;
   }
+}
+
+@mixin title-description {
+  font-size: 1.8em;
+  font-family: 'Corsa Grotesk', sans-serif;
+  line-height: 32px;
+  color: $main-dark-grey;
 }
