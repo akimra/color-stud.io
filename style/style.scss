@@ -7,6 +7,7 @@ $main-dark-grey: #3C445E;
 $decor-orange: #FFB932;
 $decor-blue: #6B83DA;
 $decor-dark-blue: #163993;
+$decor-soft-blueBG: #EFF6FB;
 $main-line-grey: #E5E8F0;
 $main-light-grey: #CCD1DD;
 
@@ -23,6 +24,7 @@ body {
   width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
+  z-index: -20;
 }
 
 ul {
@@ -56,6 +58,10 @@ h2 {
 
 .yellowbutton {
   @include grad-button;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 //    --    /UI Kit   --    //
 
@@ -312,5 +318,138 @@ h2 {
 
 
 //    --    expert.block    --    //
+.expert {
+  height: 452px;
+  background-color: $decor-soft-blueBG;
+  padding: 90px 135px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 100px;
+
+  &__title {
+
+  }
+
+  &__description {
+    @include title-description;
+    width: 490px;
+  }
+
+  &__input {
+    border-radius: 34px;
+    height: 68px;
+    width: 470px;
+    line-height: 68px;
+    font-family: 'Gilroy', sans-serif;
+    padding: 0 50px;
+    margin-right: -60px;
+    border: none;
+  }
+
+  
+
+  &__photo {
+    position: absolute;
+    left: 51.04%;
+    right: 5.14%;
+    top: 0%;
+    bottom: 3.32%;
+    z-index: -3;
+  }
+
+  &__rightpaint {
+    position: absolute;
+    left: 87.49%;
+    right: -19.79%;
+    top: 0;
+  }
+  
+  &__leftpaint {
+    position: absolute;
+    left: 0;
+    right: 72.49%;
+    //top: 69.03%;
+    bottom: 0;
+    z-index: -5;
+  }
+
+  &__callbutton {
+    
+    
+  }
+}
+
 
 //    --    /expert.block   --    //
+
+
+//    --    features.block    --    //
+.features {
+  text-align: center;
+  margin-left: 135px;
+  margin-right: 135px;
+  padding: 80px 100px;
+  background: linear-gradient(154.97deg, #E7F2FB 6.71%, #E3E8FB 92.8%);
+  position: relative;
+  z-index: -5;
+
+  &__mark {
+    font-size: 1.8em;
+    font-family: 'Corsa Grotesk', sans-serif;
+    line-height: 32px;
+    color: $main-dark-grey;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  &__card {
+    margin: 10px;
+    padding: 30px;
+    display: inline-block;
+    width: 400px;
+    height: 122px;
+    background-color: $main-light-grey;
+
+  }
+
+  &__leftpaint {
+    position: absolute;
+    left: 0;
+    //right: 72.49%;
+    //top: 69.03%;
+    bottom: 0;
+    z-index: -3;
+  }
+
+  &__rightpaint {
+    position: absolute;
+    //left: 87.49%;
+    right: 0;
+    top: 0;
+  }
+}
+
+.footer {
+  background-color: $decor-dark-blue;
+  height: 250px;
+  justify-content: space-around;
+  padding: 0 135px;
+  &__logo {
+    color: $main-light-grey;
+    width: 300px;
+  }
+
+  &__feedback {
+    flex-direction: column;
+    color: $main-light-grey;
+  }
+
+  &__social {
+    margin-left: 0;
+  }
+}
+//    --    /features.block   --    //
